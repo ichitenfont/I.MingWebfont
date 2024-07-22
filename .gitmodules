@@ -1,0 +1,3 @@
+[submodule "iming-src"]
+	path = iming-src
+	url = https://github.com/ichitenfont/I.Ming

@@ -1,0 +1,54 @@
+name: Webfont Subsetter
+on:
+  workflow_dispatch: # manual trigger
+  repository_dispatch:
+    types: [trigger-workflow]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Pull & update submodule fonts
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+      
+      - name: Install dependency
+        run: pip install -r requirements.txt
+
+      - name: Run subsetter
+        run: python .github/workflows/webfont-subsetter.py
+      
+      - name: Record version
+        id: version-output
+        run: echo "version=$(cat VERSION)" >> $GITHUB_OUTPUT
+      
+      - name: Commit files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Bump version to ${{ steps.version-output.outputs.version }}
+
+      - name: Create Tag
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/tags/${{ steps.version-output.outputs.version }}`,
+              sha: context.sha
+            })
