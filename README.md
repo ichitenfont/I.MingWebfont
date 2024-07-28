@@ -8,7 +8,7 @@
 
 「I.明體」這字型名稱裏的「I」是羅馬數字「一」，「I.」唸作「一點（[粵]Jat1 dim2、[中古]Qit temq、[客]Jit7 diam3、[北]Yī diǎn、[日]いちてん、[英]One-dot）」，象徵筆畫的基本：點與線。
 
-使用「I.明體」時，請遵從「[IPA開放字型授權協議 1.0版](IPA_Font_License_Agreement_v1.0_chi.md)（[IPA Open Font License v1.0](IPA_Font_License_Agreement_v1.0.md#ipa-font-license-agreement-v10)，[IPAフォントライセンスv1.0](IPA_Font_License_Agreement_v1.0.md)）」之規定。
+使用「I.明體」時，請遵從「[IPA開放字型授權協議 1.0版](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE_CHI.md)（[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md#ipa-font-license-agreement-v10)，[IPAフォントライセンスv1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)）」之規定。
 
 但凡有任何人使用、複製、修改、分發本字型，或對本字型進行任何符合「IPA開放字型授權協議 1.0版」規定的行爲，使用、下載或行使合約規定權利之接受方，亦視爲同意遵守「IPA開放字型授權協議 1.0版」的一切規定。
 
@@ -43,4 +43,4 @@ body {
 
 本倉庫的代碼以「[共享創意-署名4.0授權協議](https://creativecommons.org/licenses/by/4.0/)（CC BY 4.0）」授權。
 
-本倉庫使用的「I.明體」以「[IPA開放字型授權協議 1.0版](https://github.com/ichitenfont/I.Ming/blob/1d982b097b105dc66b5b89952a25914c047e7310/8.10/IPA_Font_License_Agreement_v1.0_chi.md)（[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/1d982b097b105dc66b5b89952a25914c047e7310/8.10/IPA_Font_License_Agreement_v1.0.md#ipa-font-license-agreement-v10)，[IPAフォントライセンスv1.0](https://github.com/ichitenfont/I.Ming/blob/1d982b097b105dc66b5b89952a25914c047e7310/8.10/IPA_Font_License_Agreement_v1.0.md)）」使用分發。
+本倉庫使用的「I.明體」以「[IPA開放字型授權協議 1.0版](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE_CHI.md)（[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md#ipa-font-license-agreement-v10)，[IPAフォントライセンスv1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)）」使用分發。
