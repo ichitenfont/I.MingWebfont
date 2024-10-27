@@ -177,7 +177,7 @@ def prepare_font_subset(source_file, css_font_family_name, output_parent=None, j
                 "@font-face {\n",
                 "  font-family: '{}';\n".format(css_font_family_name),
                 "  font-style: normal;\n",
-                "  font-display: block;\n",
+                "  font-display: swap;\n",
                 "  src: url('./{}') format('woff2');\n".format(out_file),
                 "  unicode-range: {}\n".format(unicode),
                 "}\n"
