@@ -77,15 +77,17 @@ def merge_char_range_to_css_unicode_list(grouped_list):
             first_end = start + (MAX_RANGE_SIZE_LIMIT - (start % MAX_RANGE_SIZE_LIMIT)) - 1 # 0x7F
             output_range.append([(start, first_end)])
             
-            current_value = first_end + 1 # 0x80
-            next_value = first_end + MAX_RANGE_SIZE_LIMIT # 0xFF
-            while next_value <= end:
-                output_range.append([(current_value, next_value)])
-                current_value = next_value + 1 # 0x00
-                next_value = next_value + MAX_RANGE_SIZE_LIMIT # 0x7F
+            current_start = first_end + 1 # 0x80
+            current_end = first_end + MAX_RANGE_SIZE_LIMIT # 0xFF
+            while current_end <= end:
+                output_range.append([(current_start, current_end)])
+                current_start = current_end + 1 # 0x00
+                current_end = current_end + MAX_RANGE_SIZE_LIMIT # 0x7F
+            # out of while loop, current_end > end
             
-            if next_value != end:
-                output_range.append([(current_value, end)])
+            # check if left 0x01~0x7E, then add (1, 1~0x7E)
+            if current_start <= end < current_end:
+                output_range.append([(current_start, end)])
         else:
             # just add the range
             output_range.append(current_merged_range)
